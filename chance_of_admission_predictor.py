@@ -12,7 +12,7 @@ print("--- 1. Data Loading and Preparation ---")
 
 try:
     # Load the data from the separate CSV file
-    df = pd.read_csv('admission_data.csv')
+    df = pd.read_csv('https://github.com/ybifoundation/Dataset/raw/main/Admission%20Chance.csv')
 except FileNotFoundError:
     print("Error: 'admission_data.csv' not found. Please ensure the dataset file is present and correctly named.")
     # Create an empty DataFrame as a fallback
@@ -25,7 +25,7 @@ else:
     df.columns = df.columns.str.strip()
 
     # Drops the 'Serial No.' column as it's an irrelevant identifier
-    df = df.drop(columns=['Serial No.'])
+    df = df.drop(columns=['Serial No'])
 
     print("\nSample Data Head:")
     print(df.head())
